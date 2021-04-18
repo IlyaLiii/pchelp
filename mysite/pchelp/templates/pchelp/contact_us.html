@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/mycssfix.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontAwesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/light-box.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-main.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>мы будем рады видеть вас еще!</h1>
+        <div class="container-fluid">
+            
+                <form id="contact" action="{% url 'add' %}" method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="form-group">
+                                <div class="input-group">
+                                
+                                {{ field }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    <button type="submit" class="btn btn-primary">Отправить запрос</button>
+                </form>
+            
+        </div>
+
+</body>
+</html>
