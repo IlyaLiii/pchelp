@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.join(PROJECT_ROOT , 'pchelp'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'wa#x($7hw+eh^78z#eahfj+b56o7kgotaey@n7$p34a71e)vlb'
+# у меня не продакшен, значит можно запушить вместе с секретным ключом)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
